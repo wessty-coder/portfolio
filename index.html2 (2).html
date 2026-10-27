@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Downtown Cafe | Fresh Coffee & Pastries</title>
+    <style>
+        :root {
+            --primary: #4a3728;
+            --secondary: #d4a373;
+            --light: #fefae0;
+            --dark: #281f17;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #faf9f6;
+        }
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            padding: 0;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://unsplash.com') no-repeat center center/cover;
+            height: 60vh;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+        .btn {
+            background-color: var(--secondary);
+            color: var(--dark);
+            padding: 0.75rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #c59263;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary);
+            margin: 0.5rem auto 0;
+        }
+        .contact-info {
+            background-color: var(--primary);
+            color: white;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: var(--dark);
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">Downtown Cafe</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="tel:5551234567" class="btn" style="padding: 0.5rem 1rem; font-size: 0.9rem;">Call Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Freshly Brewed Daily</h1>
+        <p>Your local neighborhood spot for specialty coffee, artisan pastries, and a warm community atmosphere.</p>
+        <a href="#contact" class="btn">Find Us</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <h2 class="section-title">Welcome to Our Cafe</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">Founded in 2018, Downtown Cafe serves locally roasted beans and scratch-made baked goods. We pride ourselves on creating a cozy space where neighbors can connect, remote professionals can focus, and everyone can enjoy a perfect cup of coffee.</p>
+    </section>
+
+    <!-- Services / Highlights -->
+    <section id="services" style="background-color: #f0ede6;">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Specialty Coffee</h3>
+                    <p>Sourced from sustainable farms and roasted locally for the highest quality flavor profiles.</p>
+                </div>
+                <div class="card">
+                    <h3>Fresh Pastries</h3>
+                    <p>Baked in-house every single morning, including vegan and gluten-free options.</p>
+                </div>
+                <div class="card">
+                    <h3>Free Wi-Fi</h3>
+                    <p>A comfortable, productive environment equipped with high-speed internet for remote work.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Hours Section -->
+    <section id="contact" class="contact-info">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Hours & Location</h2>
+            <div class="grid">
+                <div>
+                    <h3>Our Location</h3>
+                    <p>123 Main Street<br>Suite A<br>Downtown City, ST 12345</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
+                    <p><strong>Email:</strong> hello@downtowncafe.com</p>
+                </div>
+                <div>
+                    <h3>Operating Hours</h3>
+                    <p>Monday - Friday: 6:00 AM - 6:00 PM</p>
+                    <p>Saturday: 7:00 AM - 5:00 PM</p>
+                    <p>Sunday: 8:00 AM - 4:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-bottom">
+        <p>&copy; 2026 Downtown Cafe. All rights reserved.</p>
+    </div>
+
+</body>
+</html>
